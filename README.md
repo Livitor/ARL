@@ -30,3 +30,15 @@ sudo docker load < arl_rabbitmq.tar
 cd /opt/docker_arl/ARL-2.6.1/docker
 vim .env
 ```
+- 创建一个名为 `arl_db` 的用于持久化存储数据的, 首次部署灯塔需要创建, 若不是则不用理会
+```bash
+docker volume create arl_db
+```
+
+## 启动
+直接在`/opt/docker_arl/ARL-2.6.1/docker` 目录下就可以启动
+```bash
+docker-compose up -d
+```
+
+## 关闭
