@@ -1,5 +1,3 @@
-123云盘文件分享：https://www.123pan.com/s/kyiA-RlUXH?提取码:fRnI
-
 ## 安装
 - 更新本地仓库列表和系统, 如果已经更新完可以跳过
 ```bash
@@ -50,7 +48,7 @@ docker stop arl_mongodb arl_rabbitmq arl_scheduler arl_web arl_worker
 ```bash
 docker rm arl_mongodb arl_rabbitmq arl_scheduler arl_web arl_worker
 ```
-- rmi参数, 给之前导入的那三个 `tar` 包(镜像)删除
+- rmi参数, 用于删除镜像, 给之前导入的那三个 `tar` 包(镜像)删除
 ```bash
 docker rmi mongo:4.0.27 rabbitmq:3.8.19-management-alpine tophant/arl:v2.6.1 
 ```
