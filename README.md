@@ -35,6 +35,7 @@ docker volume create arl_db
 
 ## 启动
 直接在`/opt/docker_arl/ARL-2.6.1/docker` 目录下就可以启动
+启动完之后就可以访问 `IP:5503` 了, 默认账号: `admin` , 默认密码: `arlpass`
 ```bash
 docker-compose up -d
 ```
