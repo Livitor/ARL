@@ -1,6 +1,6 @@
 123云盘文件分享：https://www.123pan.com/s/kyiA-RlUXH?提取码:fRnI
 
-## 如何安装
+## 安装
 - 更新本地仓库列表和系统, 如果已经更新完可以跳过
 ```bash
 sudo apt update
@@ -42,3 +42,15 @@ docker-compose up -d
 ```
 
 ## 关闭
+- stop参数, 只能用于停止, 并不会删除这些容器, 后期还使用这些容器, 就可以使用 `start` 参数
+```bash
+docker stop arl_mongodb arl_rabbitmq arl_scheduler arl_web arl_worker
+```
+- rm参数, 用于删除已经创建的容器
+```bash
+docker rm arl_mongodb arl_rabbitmq arl_scheduler arl_web arl_worker
+```
+- rmi参数, 给之前导入的那三个 `tar` 包(镜像)删除
+```bash
+docker rmi mongo:4.0.27 rabbitmq:3.8.19-management-alpine tophant/arl:v2.6.1 
+```
