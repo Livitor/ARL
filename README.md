@@ -1,7 +1,13 @@
 123云盘文件分享：https://www.123pan.com/s/kyiA-RlUXH?提取码:fRnI
 
 ## 如何安装
-- 安装 `docker.io` 和 `docker-compose`
+- 更新本地仓库列表和系统, 如果已经更新完可以跳过
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+- 安装 `docker.io` 和 `docker-compose` , 如果已经安装过可以跳过
 ```bash
 sudo apt install docker.io docker-compose -y
 ```
@@ -17,4 +23,10 @@ unzip ARL-2.6.1.zip
 sudo docker load < arl_2.6.1.tar
 sudo docker load < arl_mongo.tar
 sudo docker load < arl_rabbitmq.tar
+```
+
+- 进入到 `/opt/docker_arl/ARL-2.6.1/docker` 目录, 然后配置 `.env` 文件, 修改内容为: `ARL_VERSION=v2.6.1`
+```bash
+cd /opt/docker_arl/ARL-2.6.1/docker
+vim .env
 ```
