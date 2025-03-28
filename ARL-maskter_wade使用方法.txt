@@ -1,0 +1,22 @@
+tar包是本间白猫的脚本拉取到本地，然后使用save参数导出来的镜像，最近一次使用没有用到这个tar包， 可以直接下载源码包然后给docker换源，然后使用docker-compse up -d部署，具体如何部署看教程：https://blog.csdn.net/weixin_50810166/article/details/138978124
+
+教程:
+1.配置docker apt
+echo 'deb https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian/ buster stable' |sudo tee /etc/apt/sources.list.d/docker.list
+ 
+2.更新apt
+apt-get update
+ 
+3.安装docker
+apt-get install docker.io docker-compose -y
+
+
+cd /opt/ #进入opt目录
+mkdir docker_arl #创建docker_arl 目录
+cd docker_arl  #进入该目录
+unzip  ARL-master_wade.zip #将文件解压
+cd ARL-master_wade/docker 
+docker volume create arl_db #创建一个新的卷（volume）并将其命名为 arl_db
+mv docker-compose_wade.yml docker-compose.yml #设置好docker镜像
+docker-compose pull #docker拉取镜像
+docker-compose up -d  #运行
