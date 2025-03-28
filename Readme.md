@@ -42,16 +42,6 @@ docker-compose pull
 docker-compose up -d 
 ```
 
-或者直接下载`docker-compose`配置文件启动
-```
-mkdir docker_arl
-wget -O docker_arl/docker.zip https://github.com/TophantTechnology/ARL/releases/download/v2.5.4/docker.zip
-cd docker_arl
-unzip -o docker.zip
-docker-compose pull
-docker volume create arl_db
-docker-compose up -d
-```
 
 Ubuntu 下可以直接执行 `apt-get install docker.io docker-compose -y` 安装相关依赖
 
@@ -150,27 +140,6 @@ db.user.drop()
 db.user.insert({ username: 'admin',  password: hex_md5('arlsalt!@#'+'admin123') })
 ```
 
-
-### 源码安装
-
-仅仅适配了 centos 7 ，且灯塔安装目录为/opt/ARL
-如果在其他目录可以创建软连接，且安装了四个服务分别为`arl-web`, `arl-worker`, `arl-worker-github`, `arl-scheduler`
-
-```
-wget https://raw.githubusercontent.com/TophantTechnology/ARL/master/misc/setup-arl.sh
-chmod +x setup-arl.sh
-./setup-arl.sh
-```
-
-
-### Docker 环境安装
-
-仅仅适配了 centos 7 ，且灯塔安装目录为/opt/ARL
-```
-wget https://raw.githubusercontent.com/TophantTechnology/ARL/master/misc/setup-docker-arl.sh
-chmod +x setup-docker-arl.sh
-./setup-docker-arl.sh
-```
 
 ### FAQ
 
