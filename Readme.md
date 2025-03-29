@@ -42,6 +42,11 @@ docker volume create arl_db
 docker-compose pull
 docker-compose up -d 
 ```
+### Docker 停止
+```
+cd ARL/docker
+docker-compose down
+```
 
 Ubuntu 下可以直接执行 `apt-get install docker.io docker-compose -y` 安装相关依赖
 
