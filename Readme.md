@@ -36,7 +36,7 @@ docker 镜像加速地址最好是华为云的
 ### Docker 启动
 
 ```
-git clone https://github.com/TophantTechnology/ARL
+git clone https://github.com/Livitor/ARL
 cd ARL/docker/
 docker volume create arl_db
 docker-compose pull
